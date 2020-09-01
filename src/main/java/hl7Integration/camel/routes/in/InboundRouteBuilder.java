@@ -26,19 +26,19 @@ public class InboundRouteBuilder extends SpringRouteBuilder {
 							return true;
 						return false;
 					}
-				}).to("bean:ADT_A01?method=process").when(new Predicate() {
+				}).to("bean:ADT_A01Procssor?method=process").when(new Predicate() {
 					public boolean matches(Exchange exchange) {
 						if (msgType(exchange).equals("A03"))
 							return true;
 						return false;
 					}
-				}).to("bean:ADT_A03?method=process").when(new Predicate() {
+				}).to("bean:ADT_A03Processor?method=process").when(new Predicate() {
 					public boolean matches(Exchange exchange) {
 						if (msgType(exchange).equals("R01"))
 							return true;
 						return false;
 					}
-				}).end();
+				}).to("bean:ORU_R01Processor?method=process").end();
 
 	}
 
