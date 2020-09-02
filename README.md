@@ -1,5 +1,6 @@
 # camelHL7Listener
 
-Projeyi çalıştırmak için aşağıdaki komutu proje ana dizininde çalıştırınız.
+Run the following command in the project home directory
+//Aşağıdaki komutu proje ana dizininde çalıştırınız.
 
 mvn camel:run
