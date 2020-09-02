@@ -42,7 +42,7 @@ public class InboundRouteBuilder extends SpringRouteBuilder {
 
 	}
 
-	public String msgType(Exchange exchange) {
+	private String msgType(Exchange exchange) {
 		try {
 			Message msg = exchange.getIn().getBody(Message.class);
 			MSH aa;
